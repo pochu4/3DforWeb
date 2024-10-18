@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D for the Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <!-- Johann Chua - A01174894 -->
+
+    <div class="container">
+
+        <div class="description">
+            <h1>RX-178 Gundam Mk-II</h1>
+
+            <p>A direct descendant of the RX-78-2 Gundam developed by the Titans, the Gundam Mk-II is the first mobile
+                suit
+                to utilize the new movable frame concept. In this new concept, rather than merely serving as a
+                structural
+                framework, the movable frame incorporates all the mobile suit's vital mechanisms, including the
+                actuators
+                and control systems required for movement, and excludes the mobile suit's weapons, armor, and propellant
+                tanks. This approach dramatically improves the mobile suit's responsiveness, reliability, and energy
+                efficiency, as well as making it far more agile than traditional designs.</p>
+
+            <!-- <button id="orbitBtn" onclick="getOrbit()"></button> -->
+            <div class="buttons">
+                <button class="front-btn"
+                    onclick="setOrbit('-0.81681408993334rad 1.780235837034214rad 39.870771830159505m')">
+                    GUN
+
+                </button>
+                <button class="front-btn"
+                    onclick="setOrbit('1.6022122533308023rad 1.1205013797803602rad 39.870771830159505m')">
+                    SHIELD
+                    <span class="top"></span>
+                    <span class="right"></span>
+                    <span class="bottom"></span>
+                    <span class="left"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="model">
+            <model-viewer id="gundam" src="assets/gundam_rx_178_mk_ii.glb" camera-controls touch-action="pan-y"
+                alt="gundam rx 178" exposure="2" skybox-image="assets/background.jpeg"></model-viewer>
+        </div>
+
+    </div>
+
+    <!-- <button id="front-btn">Front</button>
+    <button id="back-btn">Back</button> -->
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
